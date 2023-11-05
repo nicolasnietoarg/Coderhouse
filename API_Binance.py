@@ -14,9 +14,13 @@ data = {
     "data": []
 }
 
+import datetime
+
 for kline in klines:
+    timestamp = kline[0]
+    fecha_hora = datetime.datetime.fromtimestamp(timestamp / 1000)
     data["data"].append({
-        "timestamp": kline[0],
+        "timestamp": fecha_hora.strftime("%Y-%m-%d %H:%M:%S"),
         "open": kline[1],
         "high": kline[2],
         "low": kline[3],
@@ -25,7 +29,8 @@ for kline in klines:
     })
 
 
+
 json_data = json.loads(json.dumps(data))
 df = pd.json_normalize(json_data["data"])
-df = df.head(100)
+df = df.head()
 print(df)

@@ -10,3 +10,6 @@ Para ejecutar este script es necesario:
 2. Tener clave API_KEY y API_SECRET_KEY
 
 Para ejecutar correctamente es necesario modificar el file config.py con las credenciales correctas.
+
+
+De ser necesario se debe instalar la libreria binance-data.

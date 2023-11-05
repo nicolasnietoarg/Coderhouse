@@ -1,9 +1,16 @@
 import json
 import pandas as pd
 from binance.client import Client
-import config
+from configparser import ConfigParser
 
-client = Client(config.API_KEY, config.API_SK)
+parser = ConfigParser()
+parser.read('config/config.ini')
+
+config = parser['API']
+API_KEY = config['API_KEY']
+API_SK = config['API_SK']
+
+client = Client(API_KEY, API_SK)
 
 symbol = "BTCUSDT"
 interval = "1h"

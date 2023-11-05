@@ -28,8 +28,6 @@ for kline in klines:
         "volume": kline[5]
     })
 
-
-
 json_data = json.loads(json.dumps(data))
 df = pd.json_normalize(json_data["data"])
 df = df.head()

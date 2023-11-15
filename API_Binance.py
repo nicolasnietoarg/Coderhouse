@@ -2,6 +2,7 @@ import json
 import pandas as pd
 from binance.client import Client
 from configparser import ConfigParser
+import Redshift
 
 parser = ConfigParser()
 parser.read('config/config.ini')
@@ -20,8 +21,6 @@ klines = client.futures_klines(symbol=symbol, interval=interval)
 data = {
     "data": []
 }
-
-import datetime
 
 for kline in klines:
     timestamp = kline[0]

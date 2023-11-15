@@ -99,7 +99,7 @@ def load_data_redshift(df, tabla, conn_string):
             f"He realizado la carga de los primero 100 registros en la {tabla}. Alto laburo."
         )
     except Exception as e:
-        print(f"Hay algo mal que no esta bien en la {tabla}: {str(e)}")
+        print(f"Hay algo mal en la {tabla}: {str(e)}")
     finally:
         # conexion finalizada
         conn.close()

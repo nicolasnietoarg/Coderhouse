@@ -22,3 +22,8 @@ Actualmente estamos realizando las conexiones a la base de datos para poder gene
 Esta informacion puede ser consumida incluso por algun algoritmo entrenado por machine learning para poder predecir los targets buscados.
 
 Como desafio final se va a buscar automatizar la tecnica de trading para que el mismo abra y cierre operaciones de timeframes menores a 5 minutos.
+
+ACLARACIONES:
+el proceso inicialmente carga en un staging. Aun falta agregar el simbolo a cargar para identificar la informacion.
+por lo tanto la tabla no contiene sortkey por el momento porque aun no esta asignado el simbolo.
+Mas adelante cuando el proceso se desarrolle vamos a harcodear el simbolo para poder agregar el sortkey
